@@ -1,104 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Clase 2</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clase 2</title>
 
-        <link rel="stylesheet" type="text/css" href="./index.css">
-        <script src="./index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="./index.js"></script>
+
+  </head>
+
+  <body>
+
+    <section>
         
-    </head>
+      <h1>Clase 2: Formularios</h1>
 
-    <body>
-        <h1>Clase 2: Formularios</h1>
+      <form action="" method="post" id="form-usuario">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          
+          <input
+            type="text"
+            required
+            name="nombre"
+            id="nombre"
+            placeholder="Ingrese nombre.."
+          />
+        </div>
 
-        <form action="" method="post" id="form-usuario">
+        <div class="form-group">
+          <label for="apellido">Apellido</label>
 
-            <label for="name">Nombre</label>
-            <input type="text" name="nombre" id="name" autocapitalize="off" placeholder="Ingrese el nombre.." />
-           
-            <br/>
+          <input
+            type="text"
+            required
+            name="apellido"
+            id="apellido"
+            placeholder="Ingrese apellido.."
+          />
+        </div>
 
-            <label for="contraseña">Contraseña:</label>
-            <input type="passowrd" name="passowrd" id="contraseña" placeholder="Ingrese la contraseña.." />
-            
-            <br/>
-
+        <!-- Puede elegir multiple opcion -->
+        <div class="form-group">
             <div class="form-group">
-                <label for="edad">Edad</label>
-                <input 
-                    type="number" 
-                    required 
-                    name="edad" 
-                    id="edad" 
-                    min="18" 
-                    max="81" 
-                    placeholder="Ingrese la edad" 
-                />
+              <label for="rock">Rock</label>
 
+              <input type="checkbox" name="rock" id="rock" />
             </div>
+          
+            <div class="form-group">
+              <label for="pop">Pop</label>
 
-            <br/>
+              <input type="checkbox" name="pop" id="pop" />
+            </div>
+          
+            <div class="form-group">
+              <label for="reggae">Reggae</label>
 
-            <label for="rock">Rock</label>
-            <input type="checkbox" name="rock" id="rock" />
+              <input type="checkbox" name="reggae" id="reggae" />
+            </div>
+        </div>
 
-            <br/>
-
-            <label for="reggae">Reggae</label>
-            <input type="checkbox" name="reggae" id="reggae" />
-
-            <br/>
-
+        <!-- Solo puede elegir una opcion -->
+        <div class="form-group">
+          <div class="form-group">
             <label for="rMasculino">Masculino</label>
+
             <input type="radio" name="genero" id="rMasculino" />
+          </div>
 
+          <div class="form-group">
             <label for="rFemenino">Femenino</label>
+
             <input type="radio" name="genero" id="rFemenino" />
+          </div>
+        </div>
 
-            <br/>
+        <div class="form-group">
+          <div class="form-group">
+            <label for="pais">Pais</label>
 
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" autocapitalize="off" placeholder="Ingrese el email.." />
+            <select name="pais" id="pais">
+              <optgroup label="Lat">
+                <option value="1">Argentina</option>
+                <option value="2">Brazion</option>
+                <option value="3">Francia</option>
+              </optgroup>
 
-            <br/>
+              <optgroup label="Eur">
+                <option value="4">Argentina</option>
+                <option value="5">Brazion</option>
+                <option value="6">Francia</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
 
-            <!-- Puede elegir multiple opcion -->
-            <div class="form-gruop">
-                <label for="pais">Pais</label>
+        <div class="form-group">
+          <label for="observacion">Observacion</label>
+          
+          <textarea
+            type="text"
+            name="observacion"
+            id="observacion"
+            rows="4"
+            placeholder="Ingrese Observacion..">
+          </textarea>
+        </div>
 
-                <select name="pais" id="pais">
-                    <optgroup label="Lat">
-                        <option value="1">Argentina</option>
-                        <option value="2">Chile</option>
-                    </optgroup>
-                </select>
-            </div>
+        <div class="form-group">
+            <label for="archivo">Archivo</label>
+            
+            <input
+              type="file"
+              name="archivo"
+              id="archivo"
+              placeholder="Ingrese Archivo..">
+        </div>
 
-            <div class="form-gruop">
-                <label for="observacion">Observación</label>
-                <textarea 
-                name="text" 
-                id="observacion" 
-                rows="4"
-                placeholder="Ingrse Observacion...">
+        <div class="form-group">
+          <button type="submit" class="btn">Enviar!</button>
+        </div>
+      
+    </form>
 
-            </textarea>
-            </div>
+    </section>
 
-            <div class="form-gruop">
-                <label for="archivos">Archivos</label>
+  </body>
 
-                <input 
-                    type="file" 
-                    name="archivo" 
-                    id="archivo" 
-                    placeholder="Ingrese un Archivo" />
-            </div>
-
-            <button type="submit" name="btn" id="btn">Gurardar Datos</button>
-
-        </form>
-    </body>
 </html>
