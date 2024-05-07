@@ -1,12 +1,12 @@
 @font-face {
 	font-family: poppins;
-	src: url(../assets/fonts/Poppins-Black.ttf);
+	src: url(../assets/font/Poppins/Poppins-Black.ttf);
 }
 
 header {
   padding: 20px 20px;
   background-color: grey;
-  background-image: url(../assets/images/header.jpg);
+  background-image: url(../assets/img/header.jpg);
   background-repeat: no-repeat;
   background-position: center center;
 
@@ -50,8 +50,9 @@ header h1 {
 
 footer {
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
 
+  align-items: center;
   justify-content: space-between;
   
   color: white;
@@ -105,4 +106,16 @@ footer {
 
 .table-stripped tbody tr:nth-child(even) {
   background-color: #f2f2f2;
+}
+
+
+.container-btn-delete-all {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container-btn-delete-all .btn {
+  max-width: 7rem;
 }

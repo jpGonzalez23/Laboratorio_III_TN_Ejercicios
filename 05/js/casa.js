@@ -6,7 +6,11 @@ class Casa {
     }
 
     verify() {
-        return this.titulo && this.precio > 0;
+        return this.checkTitulo();
+    }
+
+    checkTitulo() {
+        return { succes: true, rta: null };
     }
 }
 
